@@ -1,0 +1,59 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    overflow-y: scroll;
+    border: solid red 2px;
+    min-height: 100vh;
+    min-width: 100%;
+}
+
+.page-grid-container{
+    border: solid black 1px;
+    display: grid;
+    grid-template-areas: 
+    'containerOne'
+    'containerTwo'
+    'containerThree';
+    grid-template-rows: 1fr 5fr 1fr;
+    
+}
+.cont{
+    border: solid black 2px;
+}
+
+.one{
+    grid-area: containerOne;
+    display: flex;
+    align-items: center;
+}
+.one-image{
+    flex-grow: 1;
+}
+.one-nav{
+    flex-grow: 2;
+    border: solid black 1px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.two{
+    grid-area: containerTwo;
+ 
+    color: red;
+}
+.two-text{
+}
+
+
+
+.three{
+    grid-area: containerThree;
+}
+
+
