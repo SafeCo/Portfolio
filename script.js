@@ -6,4 +6,4 @@ const starryBackground = document.querySelectorAll(".test")
 gsap.set(welcomeText,{autoAlpha:0})
 gsap.to(welcomeText, { yPercent: -50, autoAlpha:1, ease: "power1.out"})
 
-gsap.to(starryBackground, {y: -300, repeat: -1, duration: 10 } )
+gsap.to(starryBackground, {yPercent: -50, duration: 10 } )

@@ -79,12 +79,56 @@ body{
     flex-grow: 2;
 }
 .nav-list{
+    border: solid red 1px;
     font-size: var(--fs-h3);
     font-family: var(--ff-primary);
     width: 100%;
     list-style-type: none;
     display: flex;
     justify-content: space-around;
+}
+.nav-list div{
+    position: relative;
+    display: inline-block;
+    border: solid yellow 1px;
+    width: 100%;
+}
+
+.nav-list div::before{
+    content: "";
+    border: solid red 2px;
+    position: absolute;
+    z-index: -2;
+    top:100%;
+    width: 0;
+    transform: scale(0);
+}
+.nav-list div::after{
+    content: "";
+    border: solid yellow 2px;
+    position: absolute;
+    z-index: -1;
+    top:100%;
+    left: 0;
+    width: 0;
+    transform: scale(0);
+}
+
+.nav-list div:hover:before{
+    animation: button 0.7s forwards;
+}
+
+.nav-list div:hover:after{
+    animation-name: button;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes button {
+    0% {width: 0%; transform: scale(0);}
+    1% {width: 1%; transform: scale(1);}
+    100% {width: 100%; transform: scale(1);}
 }
 
 
