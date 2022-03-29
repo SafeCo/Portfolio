@@ -21,6 +21,7 @@
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
 
+    
 }
 body{
     
@@ -63,9 +64,6 @@ body{
 
 
 
-.cont{
-}
-
 
 .one{
     display: flex;
@@ -87,6 +85,9 @@ body{
     display: flex;
     justify-content: space-around;
 }
+.nav-list li{
+    border: solid orange 1px;
+}
 .nav-list div{
     position: relative;
     display: inline-block;
@@ -94,42 +95,21 @@ body{
     width: 100%;
 }
 
-.nav-list div::before{
-    content: "";
-    border: solid red 2px;
+.nav-list span:nth-child(1){
     position: absolute;
-    z-index: -2;
-    top:100%;
-    width: 0;
-    transform: scale(0);
-}
-.nav-list div::after{
-    content: "";
     border: solid yellow 2px;
-    position: absolute;
-    z-index: -1;
-    top:100%;
-    left: 0;
+    bottom: -20%;
+    left:0;
     width: 0;
-    transform: scale(0);
+}
+.nav-list span:nth-child(2){
+    position: absolute;
+    border: solid red 2px;
+    bottom: -20%;
+    left:0;
+    width: 0;
 }
 
-.nav-list div:hover:before{
-    animation: button 0.7s forwards;
-}
-
-.nav-list div:hover:after{
-    animation-name: button;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-delay: 0.3s;
-}
-
-@keyframes button {
-    0% {width: 0%; transform: scale(0);}
-    1% {width: 1%; transform: scale(1);}
-    100% {width: 100%; transform: scale(1);}
-}
 
 
 
