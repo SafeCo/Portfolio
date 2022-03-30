@@ -85,30 +85,57 @@ body{
     display: flex;
     justify-content: space-around;
 }
-.nav-list li{
-    border: solid orange 1px;
-}
-.nav-list div{
+.btn{
     position: relative;
     display: inline-block;
     border: solid yellow 1px;
-    width: 100%;
 }
 
-.nav-list span:nth-child(1){
+.btn::before{
+    content: "";
     position: absolute;
-    border: solid yellow 2px;
     bottom: -20%;
-    left:0;
-    width: 0;
+    width: 100%;
+    height: 0.3rem;
+    background-color: green;
 }
-.nav-list span:nth-child(2){
+
+
+.btn-left::before{
+    transform: scale(0, 1);
+    transform-origin: 0% 100%;
+    transition: transform 0.3s ease;
+
+}
+
+.btn-left:hover::before{
+    transform: scale(1, 1);
+
+} 
+
+.btn::after{
+    content: "";
     position: absolute;
-    border: solid red 2px;
+    left: 0;
     bottom: -20%;
-    left:0;
-    width: 0;
+    height: 0.3rem;
+    width: 100%;
+    background-color: red;
 }
+.btn-left::after{
+    transform: scale(0, 1);
+    transform-origin: 0% 100%;
+    transition: transform 0.8s ease;
+}
+
+.btn-left:hover::after{
+    transform: scale(1, 1);
+
+} 
+
+
+
+
 
 
 
