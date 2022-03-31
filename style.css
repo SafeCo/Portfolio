@@ -94,7 +94,7 @@ body{
     flex-grow: 2;
 }
 .nav-list{
-    border: solid red 1px;
+    /* border: solid red 1px; */
     font-size: var(--fs-h3);
     font-family: var(--ff-primary);
     width: 100%;
@@ -106,7 +106,8 @@ body{
 .btn{
     position: relative;
     display: inline-block;
-    border: solid yellow 1px;
+    cursor: pointer;
+    /* border: solid yellow 1px; */
     color: #c5c7c5;
     transition: color 1s;
 }
@@ -175,10 +176,12 @@ body{
     position: absolute;
     top: 35%;
     left: 5%;
+    display: flex;
     font-family: var(--ff-primary);
     font-size: 3rem;
     animation:textUp 3s forwards ;
 }
+
 
 
 @keyframes textUp {
