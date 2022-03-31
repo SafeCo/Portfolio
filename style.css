@@ -29,6 +29,7 @@ body{
     background-image: linear-gradient(#01162E, #01426D);
     /* #001D37 */
     color: white;
+    overflow: hidden;
    
 }
 
@@ -52,13 +53,29 @@ body{
 #starry{
     /* border: solid red 2px; */
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     position: absolute;
     overflow: hidden;
+    animation:starryUp 20s forwards ;
     
 }
 
+/* #starry img{
+    animation:starryUp 3s forwards ;
+} */
 
+/* @keyframes starryUp {
+    0% {transform: translate3d(0 , 0 , 0);}
+    100% {transform: translate3d(0, -30% , 0);}
+    
+} */
+
+@keyframes starryUp {
+    0% {transform: rotateZ(0deg);}
+    100% {transform: rotateZ(360deg);}
+    
+}
 
 
 
@@ -83,12 +100,20 @@ body{
     width: 100%;
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around;    
 }
+
 .btn{
     position: relative;
     display: inline-block;
     border: solid yellow 1px;
+    color: #c5c7c5;
+    transition: color 1s;
+}
+
+.btn:hover{
+    color: white;
+    transition: color 1s;
 }
 
 .btn::before{
@@ -110,6 +135,7 @@ body{
 
 .btn-left:hover::before{
     transform: scale(1, 1);
+    
 
 } 
 
@@ -130,7 +156,6 @@ body{
 
 .btn-left:hover::after{
     transform: scale(1, 1);
-
 } 
 
 
@@ -152,9 +177,14 @@ body{
     left: 5%;
     font-family: var(--ff-primary);
     font-size: 3rem;
-    
+    animation:textUp 3s forwards ;
 }
 
 
+@keyframes textUp {
+    0% {opacity:0; transform: translate3d(0 , 0 , 0);}
+    100% {opacity:1; transform: translate3d(0, -50% , 0);}
+    
+}
 
 
