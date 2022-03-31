@@ -172,14 +172,24 @@ body{
     height: 80%;
     
 }
-.two-text{
+.intro-text{
     position: absolute;
     top: 35%;
     left: 5%;
-    display: flex;
     font-family: var(--ff-primary);
     font-size: 3rem;
+    cursor: default;
     animation:textUp 3s forwards ;
+}
+
+.bounce{
+    transition: color 1s;
+}
+
+
+.bounce:hover{
+    color: red;
+    transition: color 0.3s;
 }
 
 
