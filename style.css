@@ -33,54 +33,12 @@ body{
    
 }
 
-/* #stars-container{
+#wrapper{
     position: absolute;
-    border: solid red 1px;
-    height: 100px;
-    width: 100px;
-    top: 15%;
-    left: 10%;
-}
-
-.star{
-    border: solid white 1px;
-    background-color: white;
-    border-radius: 50%;
-    height: 7px;
-    width: 7px;
-} */
-
-#starry{
-    /* border: solid red 2px; */
-    display: flex;
-    flex-wrap: wrap;
+    height: 100%;
     width: 100%;
-    position: absolute;
-    overflow: hidden;
-    animation:starryUp 20s forwards ;
     
 }
-
-/* #starry img{
-    animation:starryUp 3s forwards ;
-} */
-
-/* @keyframes starryUp {
-    0% {transform: translate3d(0 , 0 , 0);}
-    100% {transform: translate3d(0, -30% , 0);}
-    
-} */
-
-@keyframes starryUp {
-    0% {transform: rotateZ(0deg);}
-    100% {transform: rotateZ(360deg);}
-    
-}
-
-
-
-
-
 
 .one{
     display: flex;
@@ -89,6 +47,7 @@ body{
 }
 .one-image{
     flex-grow: 1;
+    margin-left: 2%;
 }
 .one-nav{
     flex-grow: 2;
@@ -189,6 +148,7 @@ body{
 
 .bounce:hover{
     color: red;
+    transform: scale(2);
     transition: color 0.3s;
 }
 

@@ -1,3 +1,7 @@
+particlesJS.load("particles-js", "particles.json");
+
+
+
 const welcomeText = document.querySelector(".two-text")
 const contTwo = document.querySelector(".two")
 const starryBackground = document.querySelectorAll(".test")
