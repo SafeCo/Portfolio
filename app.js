@@ -9,6 +9,16 @@ const root = document.documentElement
 const navButtons = document.querySelector(".nav-list")
 const introText = document.querySelector('.intro-text').children;
 
+
+const body = document.body,
+      html = document.documentElement;
+
+let height = Math.max( body.scrollHeight, body.offsetHeight, 
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+root.style.setProperty('--document-height', height + "px")
+
+
 for (let i = 0; i < introText.length; i++){
     const text = introText[i];
     const strText = text.textContent;
