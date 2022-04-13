@@ -27,7 +27,7 @@ html{
 
     
 }
-#landing-page, #about-me{
+#landing-page, #about-me, #projects{
     height: 100vh;
     background-image: linear-gradient(#01162E, #01426D);
     /* #001D37 */
@@ -63,6 +63,10 @@ a{
     flex-grow: 1;
     margin-left: 2%;
 }
+.one-image img:hover{
+    border: solid red 2px;
+    filter: brightness(200%);
+}
 .one-nav{
     flex-grow: 2;
 }
@@ -95,7 +99,7 @@ a:hover{
     bottom: -20%;
     width: 100%;
     height: 0.3rem;
-    background-color: green;
+    background-color: white;
 }
 
 
@@ -164,3 +168,34 @@ a:hover{
 }
 
 
+
+/*                                              ABOUT ME PAGE */
+
+#about-me-container{
+    
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about-me-card{
+    border-radius: 12px;
+    background-color: white;
+    opacity: 0.8;
+    height: 80%;
+    width: 80%;
+}
+#about-me-text{
+    border: solid red 2px;
+    font-size: var(--fs-h1);
+    font-family: var(--ff-primary);
+    color: black;
+    opacity: 1;
+}
+
+#about-me-text p{
+    font-size: var(--fs-h3);
+    font-family: var(--ff-secondary);
+}
