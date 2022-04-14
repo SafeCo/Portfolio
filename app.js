@@ -1,12 +1,6 @@
 particlesJS.load("particles-js", "particles.json");
 
-
-
-const welcomeText = document.querySelector(".two-text")
-const contTwo = document.querySelector(".two")
-const starryBackground = document.querySelectorAll(".test")
 const root = document.documentElement
-const navButtons = document.querySelector(".nav-list")
 const introText = document.querySelector('.intro-text').children;
 
 
@@ -37,3 +31,22 @@ for (let i = 0; i < introText.length; i++){
 }
 
 
+
+
+//                              HOVER ON ITEM IMAGE
+
+const projectRepo = document.querySelector(".project-item-repo")
+
+function increaseSizeAnimation(){
+    let itemRepo = projectRepo.children[1]
+    itemRepo.style.height = '100%'
+    itemRepo.style.transform = 'scale(1)'
+    
+}
+function decreaseSizeAnimation(){
+    let itemRepo = projectRepo.children[1]
+    itemRepo.style.height = '0%'
+}
+
+projectRepo.addEventListener("mouseover", increaseSizeAnimation)
+projectRepo.addEventListener("mouseleave", decreaseSizeAnimation)
