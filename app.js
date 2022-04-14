@@ -1,16 +1,20 @@
 particlesJS.load("particles-js", "particles.json");
 
-const root = document.documentElement
+fetch("./projects.json")
+    .then(res => res.json())
+    .then(data => addProjects(data))
+
+
 const introText = document.querySelector('.intro-text').children;
 
+// const root = document.documentElement
+// const body = document.body,
+//       html = document.documentElement;
 
-const body = document.body,
-      html = document.documentElement;
+// let height = Math.max( body.scrollHeight, body.offsetHeight, 
+//                        html.clientHeight, html.scrollHeight, html.offsetHeight );
 
-let height = Math.max( body.scrollHeight, body.offsetHeight, 
-                       html.clientHeight, html.scrollHeight, html.offsetHeight );
-
-root.style.setProperty('--document-height', height + "px")
+// root.style.setProperty('--document-height', height + "px")
 
 
 for (let i = 0; i < introText.length; i++){
@@ -32,21 +36,61 @@ for (let i = 0; i < introText.length; i++){
 
 
 
+//                              ADD PROJECTS
+
+
+
+
+projectsContainer = document.querySelector("#project-container")
+
+function addProjects (data) {
+    for(i = 0; i < data.length; i++){
+        let projectItem = 
+        `<div class="project-item">
+        <div class="project-item-repo">
+            <img class="item-image" src="" alt="project image"/>
+            <div class="item-repo">
+                <div>LIVE</div>
+                <div>GITHUB</div>
+            </div> 
+        </div>
+        <div class="project-item-text">
+            <h3>${data[i].title}</h3>
+            <p>${data[i].description}</p>
+            <div class="project-item-tech">
+                <p>Technologies used:</p>
+                <img src="" alt="HTML"/>
+                <img src="" alt="CSS"/>
+                <img src="" alt="JS"/>
+            </div>
+        </div>`
+        projectsContainer.innerHTML+= projectItem
+    }
+    projectListeners()
+}
+
+
+
 
 //                              HOVER ON ITEM IMAGE
 
-const projectRepo = document.querySelector(".project-item-repo")
+function projectListeners(){
+    const projectRepo = document.querySelectorAll(".project-item-repo")
+    console.log(projectRepo)
 
-function increaseSizeAnimation(){
-    let itemRepo = projectRepo.children[1]
-    itemRepo.style.height = '100%'
-    itemRepo.style.transform = 'scale(1)'
-    
-}
-function decreaseSizeAnimation(){
-    let itemRepo = projectRepo.children[1]
-    itemRepo.style.height = '0%'
-}
 
-projectRepo.addEventListener("mouseover", increaseSizeAnimation)
-projectRepo.addEventListener("mouseleave", decreaseSizeAnimation)
+    // function increaseSizeAnimation(){
+    //     let itemRepo = projectRepo.children[1]
+    //     itemRepo.style.height = '100%'
+    //     itemRepo.style.transform = 'scale(1)'
+        
+    // }
+    // function decreaseSizeAnimation(){
+    //     let itemRepo = projectRepo.children[1]
+    //     itemRepo.style.height = '0%'
+    // }
+
+    // projectRepo.addEventListener("mouseover", increaseSizeAnimation)
+    // projectRepo.addEventListener("mouseleave", decreaseSizeAnimation)
+
+}
