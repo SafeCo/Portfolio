@@ -299,8 +299,13 @@ a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: scale(0);
-    transition: height 1s, scale 10s;
+  
+    transition: height 1s;
+}
+
+.project-item-repo:hover > .item-repo{
+    height: 100%;
+    
 }
 
 

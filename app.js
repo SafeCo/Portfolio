@@ -44,7 +44,7 @@ for (let i = 0; i < introText.length; i++){
 projectsContainer = document.querySelector("#project-container")
 
 function addProjects (data) {
-    for(i = 0; i < data.length; i++){
+    for(let i = 0; i < data.length; i++){
         let projectItem = 
         `<div class="project-item">
         <div class="project-item-repo">
@@ -76,20 +76,36 @@ function addProjects (data) {
 
 function projectListeners(){
     const projectRepo = document.querySelectorAll(".project-item-repo")
-    for(let i = 0; i < projectRepo.length; i++){
-        function increaseSizeAnimation(i){
-            let itemRepo = projectRepo[i].children[1]
-            itemRepo.style.height = '100%'
-            itemRepo.style.transform = 'scale(1)'
-        }
-        function decreaseSizeAnimation(i){
-            let itemRepo = projectRepo[i].children[1]
-            itemRepo.style.height = '0%'
-        }
-            projectRepo[i].addEventListener("mouseover", ()=>{
-                console.log(i)
-                increaseSizeAnimation(i)})
-            projectRepo[i].addEventListener("mouseleave", ()=>{decreaseSizeAnimation(i)})
-    }
+    
+    
+   
+    // const itemRepo = document.querySelectorAll('.item-repo')
+    // const cssObj = window.getComputedStyle(itemRepo[0], null)
+    // console.log(cssObj.height)
+    // itemRepo[0].addEventListener('transitionend', ()=>{
+    //     cssObj.height > '0px' ?  itemRepo[0].style.transform = 'scale(1)' : itemRepo[0].style.transform = 'scale(0)' 
+
+    // })
+
+
+
+    
+    // for(let i = 0; i < projectRepo.length; i++){
+    //     function increaseSizeAnimation(i){
+    //         let itemRepo = projectRepo[i].children[1]
+    //         itemRepo.style.height = '100%'
+    //         itemRepo.style.transform = 'scale(1)'
+    //     }
+    //     function decreaseSizeAnimation(i){
+    //         let itemRepo = projectRepo[i].children[1]
+    //         itemRepo.style.height = '0%';
+    //         if(itemRepo.style.height == '10%'){
+    //             console.log("working")
+    //             itemRepo.style.transform = 'scale(0)'
+    //         }   
+    //     }
+    //         projectRepo[i].addEventListener("mouseover", ()=>{increaseSizeAnimation(i)})
+    //         projectRepo[i].addEventListener("mouseleave", ()=>{decreaseSizeAnimation(i)})
+    // }
 
 }
