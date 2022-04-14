@@ -76,21 +76,20 @@ function addProjects (data) {
 
 function projectListeners(){
     const projectRepo = document.querySelectorAll(".project-item-repo")
-    console.log(projectRepo)
-
-
-    // function increaseSizeAnimation(){
-    //     let itemRepo = projectRepo.children[1]
-    //     itemRepo.style.height = '100%'
-    //     itemRepo.style.transform = 'scale(1)'
-        
-    // }
-    // function decreaseSizeAnimation(){
-    //     let itemRepo = projectRepo.children[1]
-    //     itemRepo.style.height = '0%'
-    // }
-
-    // projectRepo.addEventListener("mouseover", increaseSizeAnimation)
-    // projectRepo.addEventListener("mouseleave", decreaseSizeAnimation)
+    for(let i = 0; i < projectRepo.length; i++){
+        function increaseSizeAnimation(i){
+            let itemRepo = projectRepo[i].children[1]
+            itemRepo.style.height = '100%'
+            itemRepo.style.transform = 'scale(1)'
+        }
+        function decreaseSizeAnimation(i){
+            let itemRepo = projectRepo[i].children[1]
+            itemRepo.style.height = '0%'
+        }
+            projectRepo[i].addEventListener("mouseover", ()=>{
+                console.log(i)
+                increaseSizeAnimation(i)})
+            projectRepo[i].addEventListener("mouseleave", ()=>{decreaseSizeAnimation(i)})
+    }
 
 }
