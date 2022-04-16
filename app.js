@@ -48,7 +48,7 @@ function addProjects (data) {
         let projectItem = 
         `<div class="project-item">
         <div class="project-item-repo">
-            <img class="item-image" src="" alt="project image"/>
+            <img class="item-image" src="${data[i].url}" alt="project image"/>
             <div class="item-repo">
                 <div>LIVE</div>
                 <div>GITHUB</div>
@@ -59,10 +59,9 @@ function addProjects (data) {
             <p>${data[i].description}</p>
             <div class="project-item-tech">
                 <p>Technologies used:</p>
-                <img src="" alt="HTML"/>
-                <img src="" alt="CSS"/>
-                <img src="" alt="JS"/>
-            </div>
+                <a title="W3C, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:HTML5_logo_and_wordmark.svg"><img width="40" alt="HTML5 logo and wordmark" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png"></a>
+                <a title="Rudloff, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:CSS3_logo_and_wordmark.svg"><img width="30" alt="CSS3 logo and wordmark" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/256px-CSS3_logo_and_wordmark.svg.png"></a>
+                <a title="Chris Williams, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Unofficial_JavaScript_logo_2.svg"><img width="40" alt="Unofficial JavaScript logo 2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"></a>            </div>
         </div>`
         projectsContainer.innerHTML+= projectItem
     }
