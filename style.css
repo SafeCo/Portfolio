@@ -327,6 +327,9 @@ a:hover{
 
 
 .project-item-tech{
-  
     margin-top: auto;
+}
+
+.project-item-tech > *:not(:first-child){
+    margin-left: 5%;
 }
