@@ -251,13 +251,20 @@ a:hover{
 
 /*                                              PROJECTS PAGE */
 
+#projects h1{
+    font-family: var(--ff-primary);
+    font-size: 3rem;
+}
+
+
 #project-container{
-    border: solid yellow 3px;
+    
     color: red;
     display: flex;
     flex-wrap: wrap;
    
 }
+
 
 .project-item{
     position: relative;
@@ -318,7 +325,7 @@ a:hover{
 
 
 .project-item-text{
-   
+   border-top: solid black 2px;
     height: 50%;
     width: 100%;
     display: flex;
