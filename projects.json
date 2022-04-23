@@ -62,6 +62,14 @@
         "url": "./Project Images/GSAP Animations.png",
         "React" : false,
         "gsap" : true
+    },
+    {
+        "id": 9,
+        "title": "React calculator",
+        "description": "A simple calculator app made in React",
+        "url": "./Project Images/React Caluclator App.png",
+        "React" : true,
+        "gsap" : false
     }
 ]
 
