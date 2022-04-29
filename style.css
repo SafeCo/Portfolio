@@ -8,8 +8,8 @@ html{
     scroll-behavior: smooth;
 }
 :root{
-    --ff-primary: 'Source Sans Pro', sans-serif;
-    --ff-secondary: 'Source Code Pro', monospace;
+    --ff-primary: 'Montserrat', sans-serif;
+    --ff-secondary: 'Montserrat', sans-serif;
 
     --fw-reg: 300;
     --fw-bold: 900;
@@ -258,8 +258,8 @@ a:hover{
 
 
 #project-container{
-    
-    color: red;
+    font-family: var(--ff-secondary);
+    color: black;
     display: flex;
     flex-wrap: wrap;
    
@@ -335,6 +335,7 @@ a:hover{
 
 .project-item-tech{
     margin-top: auto;
+    border-top: solid black 2px;
 }
 
 .project-item-tech > *:not(:first-child){
