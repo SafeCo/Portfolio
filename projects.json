@@ -13,7 +13,7 @@
         "description": "A Drawing App with shape tools.",
         "url": "./Project Images/Drawing App.png",
         "React" : false,
-        "gsap" : false
+        "gsap" : true
      },
      {
         "id": 3,
