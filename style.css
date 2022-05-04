@@ -181,6 +181,7 @@ a:hover{
     top: 50%;
     left: 5%;
     animation: textAppear 10s forwards;
+    font-family: var(--ff-primary);
 }
 
 
@@ -285,15 +286,30 @@ a:hover{
     height: 100%;
     
 }
+.item-repo > a {
+    border: solid red 2px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    
+ 
+}
 
 .item-repo-icons{
+    border: solid yellow 2px;
     width: 75px;
     transform: scale(0);
     transition: transform 0.5s;
     cursor: pointer;
-}
 
-.item-repo:hover > .item-repo-icons{
+
+}
+.item-repo:hover > a{
+    transform: scale(1);
+}
+.item-repo:hover > a >.item-repo-icons{
     transform: scale(1);
 }
 

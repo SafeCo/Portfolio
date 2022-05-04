@@ -59,13 +59,15 @@ function addProjects (data) {
             
         }
 
+        const domainName= "safeco.github.io"
+
         let projectItem = 
         `<div class="project-item">
         <div class="project-item-repo">
-            <img class="item-image" src="${data[i].url}" alt="project image"/>
+            <img class="item-image" src="${data[i].image}" alt="project image"/>
             <div class="item-repo">
-                <img class="item-repo-icons" src="./Icons/website-hosting.svg" alt="Live">
-                <img class="item-repo-icons" src="./Icons/github-icon.svg" alt="Github"/> 
+                <a href="${"https://"+domainName+data[i].url}"> <img class="item-repo-icons" src="./Icons/website-hosting.svg" alt="Live"> </a>
+                <a href="${"https://github.com/SafeCo"+data[i].url}"> <img class="item-repo-icons" src="./Icons/github-icon.svg" alt="Github"/> </a>
             </div> 
         </div>
         <div class="project-item-text">
