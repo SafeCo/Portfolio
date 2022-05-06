@@ -177,13 +177,8 @@ a:hover{
     animation: textUp 3s forwards;
 }
 #about{
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    animation: textAppear 10s forwards;
-    font-family: var(--ff-primary);
+    font-size: 1rem;
 }
-
 
 .bounce{
     transition: color 1s;
@@ -243,7 +238,7 @@ a:hover{
     margin-right: 2%;
     margin-bottom: 2%;
     margin-top: 2%;
-    height: 350px;
+    height: 400px;
     width: 350px;
     background-color: rgba(255, 255, 255, 0.514);
     display: flex;
@@ -262,7 +257,8 @@ a:hover{
 }
 
 .item-image{
-   border-radius: 12px;
+    border-radius: 12px;
+    object-fit: contain;
     height: 95%;
     width: 95%;
 }
@@ -287,8 +283,6 @@ a:hover{
     
 }
 .item-repo > a {
-    border: solid red 2px;
-    background-color: red;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -298,7 +292,6 @@ a:hover{
 }
 
 .item-repo-icons{
-    border: solid yellow 2px;
     width: 75px;
     transform: scale(0);
     transition: transform 0.5s;
