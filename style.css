@@ -26,14 +26,17 @@ html{
     
 }
 
-#landing-page, #projects{
+#landing-page{
     height: 100vh;
     color: white;
+    background-image: linear-gradient(#01162E, #01426D);
+
 }
 
 #projects{
     height: auto;
-    color: white;
+    color: black;
+    background-color: #D3D3D3;
 }
 
 
@@ -59,8 +62,7 @@ body{
     position:absolute;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(#01162E, #01426D);
-    z-index: -1;
+    
 }
 
 #particles-js{
@@ -224,7 +226,7 @@ a:hover{
 
 #project-container{
     font-family: var(--ff-secondary);
-    color: black;
+    color: white;
     display: flex;
     flex-wrap: wrap;   
 }
@@ -240,10 +242,9 @@ a:hover{
     margin-top: 2%;
     height: 400px;
     width: 350px;
-    background-color: rgba(255, 255, 255, 0.514);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* background-color: rgba(255, 255, 255, 0.514); */
+    background-image: linear-gradient(#01162E, #01426D);
+   
     border: solid grey 2px;
 }
 
@@ -309,17 +310,16 @@ a:hover{
 
 
 .project-item-text{
-    border-top: solid grey 2px;
-    height: 50%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+    border: solid yellow 2px;
+
+   
 }
 
 
 .project-item-tech{
-    margin-top: auto;
-    border-top: solid grey 1px;
+    border: solid red 2px;
+    /* margin-top: auto; */
+    /* border-top: solid grey 1px; */
 }
 .project-item-tech  img{
     height: 40px;
