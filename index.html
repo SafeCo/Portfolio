@@ -40,25 +40,26 @@
         <section id="projects">
             <h1>Projects</h1>
             <div id="project-container">
-                <!-- <div class="project-item">
+                <!-- `<div class="project-item">
                     <div class="project-item-repo">
-                        <img  class="item-image" src="" alt="project image"/>
+                        <img class="item-image" src="${data[i].image}" alt="project image"/>
                         <div class="item-repo">
-                            <img width="75px" src="./Other images/website-hosting.svg" alt="">
-                            <img width="75px" src="./Other images/github-icon.svg" /> 
+                            <a href="${"https://"+domainName+data[i].url}"> <img class="item-repo-icons" src="./Icons/website-hosting.svg" alt="Live"> </a>
+                            <a href="${"https://github.com/SafeCo"+data[i].url}"> <img class="item-repo-icons" src="./Icons/github-icon.svg" alt="Github"/> </a>
                         </div> 
                     </div>
                     <div class="project-item-text">
-                        <h3>PROJECT NAME</h3>
-                        <p>SUMMARY, ISSUE IS TEXT CAN OVERFLOW AND PUSH THE BOTTOM BIT OUTSIDE ITEM CONTRAINER</p>
-                        <div class="project-item-tech">
-                            <p>Technologies used:</p>
-                            <img src="" alt="HTML"/>
-                            <img src="" alt="CSS"/>
-                            <img src="" alt="JS"/>
-                        </div>
+                        <h3>${data[i].title}</h3>
+                        <p>${data[i].description}</p>
                     </div>
-                </div> -->
+                    <div class="project-item-tech">
+                            <p>Technologies used:</p>
+                            <img src="./Icons/html.svg" alt="HTML">
+                            <img src="./Icons/css.svg" alt="CSS">
+                            <img src="./Icons/javascript.svg" alt="Javascript">
+                            ${checkTrue()}
+                    </div>
+                </div>` -->
             </div>
 
         </section>

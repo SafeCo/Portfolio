@@ -228,7 +228,8 @@ a:hover{
     font-family: var(--ff-secondary);
     color: white;
     display: flex;
-    flex-wrap: wrap;   
+    align-items: center;
+    flex-direction: column;
 }
 
 
@@ -236,22 +237,21 @@ a:hover{
     position: relative;
     overflow: hidden;
     border-radius: 12px;
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-bottom: 2%;
-    margin-top: 2%;
-    height: 400px;
-    width: 350px;
-    /* background-color: rgba(255, 255, 255, 0.514); */
     background-image: linear-gradient(#01162E, #01426D);
-   
     border: solid grey 2px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 300px;
+    width: 1000px;
+    display: grid;
+    grid-template-areas: "one two three";
+    grid-template-columns: 1fr 2fr 1fr;
 }
 
 .project-item-repo{
+    grid-area: one;
     position: relative;
-    height: 50%;
-    width: 100%;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -310,13 +310,16 @@ a:hover{
 
 
 .project-item-text{
+    grid-area: two;
     border: solid yellow 2px;
-
-   
+}
+.web-button{
+    display: flex;
+    
 }
 
-
 .project-item-tech{
+    grid-area: three;
     border: solid red 2px;
     /* margin-top: auto; */
     /* border-top: solid grey 1px; */

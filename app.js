@@ -73,6 +73,10 @@ function addProjects (data) {
             <div class="project-item-text">
                 <h3>${data[i].title}</h3>
                 <p>${data[i].description}</p>
+                <div class="web-button">
+                    <a href="${"https://"+domainName+data[i].url}"> <button>Live</button> </a>
+                    <a href="${"https://github.com/SafeCo"+data[i].url}"> <button>Github</button> </a> 
+                </div>
             </div>
             <div class="project-item-tech">
                     <p>Technologies used:</p>
