@@ -311,11 +311,19 @@ a:hover{
 
 .project-item-text{
     grid-area: two;
+    display: flex;
+    flex-direction: column;
     border: solid yellow 2px;
 }
 .web-button{
-    display: flex;
-    
+    margin: auto 20px 20px 0;
+    align-self: flex-end;
+}
+
+.web-button button{
+    width: 100px;
+    cursor: pointer;
+    border-radius: 12px;
 }
 
 .project-item-tech{
