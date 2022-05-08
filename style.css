@@ -29,14 +29,16 @@ html{
 #landing-page{
     height: 100vh;
     color: white;
-    background-image: linear-gradient(#01162E, #01426D);
+    background-color: #18435A;
+
+    /* background-image: linear-gradient(#01162E, #01426D); */
 
 }
 
 #projects{
     height: auto;
     color: black;
-    background-color: #D3D3D3;
+    background-color: #f5f5f5;
 }
 
 
@@ -114,7 +116,7 @@ body{
     position: relative;
     display: inline-block;
     cursor: pointer;
-    color: #bbbdbb;
+    color: rgb(163, 160, 160);
     transition: color 1s;
 }
 
@@ -226,7 +228,6 @@ a:hover{
 
 #project-container{
     font-family: var(--ff-secondary);
-    color: white;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -237,8 +238,9 @@ a:hover{
     position: relative;
     overflow: hidden;
     border-radius: 12px;
-    background-image: linear-gradient(#01162E, #01426D);
     border: solid grey 2px;
+    background-color:#13293D;
+    color: white;
     margin-top: 2%;
     margin-bottom: 2%;
     height: 300px;
@@ -313,7 +315,8 @@ a:hover{
     grid-area: two;
     display: flex;
     flex-direction: column;
-    border: solid yellow 2px;
+    border-left: solid grey 2px ;
+    border-right: solid grey 2px;
 }
 .web-button{
     margin: auto 20px 20px 0;
@@ -322,18 +325,27 @@ a:hover{
 
 .web-button button{
     width: 100px;
+    height: 25px;
     cursor: pointer;
-    border-radius: 12px;
+    border-radius: 3px;
+    background-color: #2A628F;
+    color: white;
+    border: none;
 }
 
 .project-item-tech{
     grid-area: three;
-    border: solid red 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     /* margin-top: auto; */
     /* border-top: solid grey 1px; */
 }
 .project-item-tech  img{
-    height: 40px;
+    height: 50px;
+    border: solid #2A628F 2px;
+    border-radius: 50%;
+    margin-top: 10px;
 }
 
 .project-item-tech > *:not(:first-child){
