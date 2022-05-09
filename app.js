@@ -79,7 +79,7 @@ function addProjects (data) {
                 </div>
             </div>
             <div class="project-item-tech">
-                    <p>Technologies used:</p>
+                    <p>Technologies used</p>
                     <img src="./Icons/html.svg" alt="HTML">
                     <img src="./Icons/css.svg" alt="CSS">
                     <img src="./Icons/javascript.svg" alt="Javascript">
