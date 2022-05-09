@@ -7,15 +7,6 @@ fetch("./projects.json")
 
 const introText = document.querySelector('.intro-text').children;
 
-// const root = document.documentElement
-// const body = document.body,
-//       html = document.documentElement;
-
-// let height = Math.max( body.scrollHeight, body.offsetHeight, 
-//                        html.clientHeight, html.scrollHeight, html.offsetHeight );
-
-// root.style.setProperty('--document-height', height + "px")
-
 
 for (let i = 0; i < introText.length; i++){
     const text = introText[i];
@@ -89,46 +80,33 @@ function addProjects (data) {
         
         projectsContainer.innerHTML+= projectItem
     }
-    projectListeners()
 }
 
 
 
 
-//                              HOVER ON ITEM IMAGE
+//                              Send Emails
 
-function projectListeners(){
-    const projectRepo = document.querySelectorAll(".project-item-repo")
-    
-    
-   
-    // const itemRepo = document.querySelectorAll('.item-repo')
-    // const cssObj = window.getComputedStyle(itemRepo[0], null)
-    // console.log(cssObj.height)
-    // itemRepo[0].addEventListener('transitionend', ()=>{
-    //     cssObj.height > '0px' ?  itemRepo[0].style.transform = 'scale(1)' : itemRepo[0].style.transform = 'scale(0)' 
+const contactForm = document.querySelector('#contact-form')
+const senderEmail = document.querySelector('#email')
+const senderName = document.querySelector('#name')
+const senderPhone = document.querySelector('#phone')
+const senderMessage = document.querySelector('#message')
 
-    // })
-
-
-
-    
-    // for(let i = 0; i < projectRepo.length; i++){
-    //     function increaseSizeAnimation(i){
-    //         let itemRepo = projectRepo[i].children[1]
-    //         itemRepo.style.height = '100%'
-    //         itemRepo.style.transform = 'scale(1)'
-    //     }
-    //     function decreaseSizeAnimation(i){
-    //         let itemRepo = projectRepo[i].children[1]
-    //         itemRepo.style.height = '0%';
-    //         if(itemRepo.style.height == '10%'){
-    //             console.log("working")
-    //             itemRepo.style.transform = 'scale(0)'
-    //         }   
-    //     }
-    //         projectRepo[i].addEventListener("mouseover", ()=>{increaseSizeAnimation(i)})
-    //         projectRepo[i].addEventListener("mouseleave", ()=>{decreaseSizeAnimation(i)})
-    // }
-
+window.onload = function() {
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        var tempParams = {
+            name : senderName.value,
+            email: senderEmail.value,
+            phone: senderPhone.value,
+            message: senderMessage.value,
+        }
+        emailjs.send('service_5c7blxh','template_5m5saui', tempParams )
+        .then(function(){
+            alert("Email sent sucessfully")
+            contactForm.reset()
+        })
+    });
 }
+
