@@ -220,13 +220,23 @@ a:hover{
 }
 
 #about-me-container{
+    display: flex;
+    align-items: center;
     border: solid yellow 2px;
     width: 50%;
+}
+
+#about-me-box{
+    
+    height: 400px;
+    width: 100%;
+    background: #ff5361;
 }
 
 #contact-container{
     border: solid white 2px;
     width: 50%;
+    background-color: #18435A;
 }
 
 #contact-container form{
@@ -247,6 +257,7 @@ form h1{
 }
 form input, form textarea{
     font-family: var(--ff-primary);
+    height: 30px;
     width: 300px;
     border: 0;
     border-radius: 6px;
@@ -255,6 +266,9 @@ form input, form textarea{
     outline: none;
     background: #f5f5f5;
     font-size: 16px;
+}
+form textarea{
+    height: 80px;
 }
 
 form button{
@@ -270,7 +284,12 @@ form button{
     cursor: pointer;
 }
 
-
+#form-close{
+    align-self: flex-end ;
+    width: 40px;
+    cursor: pointer;
+    margin-right: 10%;
+}
 
 
 
