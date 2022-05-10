@@ -25,6 +25,46 @@ for (let i = 0; i < introText.length; i++){
 
 }
 
+//                              CONTACT BUTTON
+
+const contactButton = document.querySelector('#contact-button')
+const contactPage = document.querySelector('#contact-container')
+const aboutmePage = document.querySelector('#about-me-container')
+const contactSection = document.querySelector('#contact-page')
+const contactClose = document.querySelector('#form-close')
+const aboutMeText = document.querySelector('#about-me-text')
+// const contactForm = document.querySelector('#contact-form')
+
+
+contactButton.addEventListener('click', ()=>{
+    contactSection.classList.remove("contact-disappear")
+    contactSection.classList.add("contact-appear") 
+    contactForm.classList.remove("text-disappear")
+    aboutMeText.classList.remove("text-disappear")
+
+})
+
+contactSection.addEventListener("animationend", ()=>{
+    if (contactSection.classList[0] == "contact-appear"){
+        contactForm.classList.add("text-appear") 
+        aboutMeText.classList.add("text-appear") 
+    }else{
+        return
+    }
+});
+
+
+contactClose.addEventListener('click', ()=>{
+    contactSection.classList.remove("contact-appear")
+    contactSection.classList.add("contact-disappear") 
+    contactForm.classList.remove("text-appear")
+    contactForm.classList.add("text-disappear")
+    aboutMeText.classList.remove("text-appear")
+    aboutMeText.classList.add("text-disappear")
+
+})
+
+
 
 
 //                              ADD PROJECTS

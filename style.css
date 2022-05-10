@@ -214,9 +214,46 @@ a:hover{
     position: absolute;
     top: 0;
     height: 100vh;
-    width: 100%;
+    width: 0%;
     border: solid red 2px;
     display:flex;
+}
+
+.contact-appear{
+    animation: contactAppear 3s forwards;
+}
+.contact-disappear{
+    animation: contactDisappear 3s forwards;
+}
+
+.text-appear{
+    animation: textAppear 3s forwards;
+}
+.text-disappear{
+    animation: textDisappear 1s forwards;
+
+}
+
+
+@keyframes textDisappear {
+    0% {opacity:1 }
+    100% {opacity:0}
+}
+
+@keyframes contactAppear {
+    0%      {transform: scale(0); width:0%;}
+    1%      {transform: scale(1); width:1%;}
+    100%    {transform: scale(1); width:100%;}
+}
+@keyframes contactDisappear {
+    0%      {transform: scale(1); width:100%;}
+    99%     {transform: scale(1); width: 1%;}
+    100%    {transform: scale(1); width:0%;}
+    
+}
+#contact-form{
+    border: solid orangered 3px;
+    opacity: 0;
 }
 
 #about-me-container{
@@ -224,18 +261,22 @@ a:hover{
     align-items: center;
     border: solid yellow 2px;
     width: 50%;
+    /* transform: scale(0); */
 }
 
 #about-me-box{
-    
     height: 400px;
     width: 100%;
     background: #ff5361;
+}
+#about-me-text{
+    opacity: 0;
 }
 
 #contact-container{
     border: solid white 2px;
     width: 50%;
+    /* transform: scale(0); */
     background-color: #18435A;
 }
 
