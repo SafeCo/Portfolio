@@ -215,7 +215,6 @@ a:hover{
     top: 0;
     height: 100vh;
     width: 0%;
-    border: solid red 2px;
     display:flex;
 }
 
@@ -252,16 +251,13 @@ a:hover{
     
 }
 #contact-form{
-    border: solid orangered 3px;
     opacity: 0;
 }
 
 #about-me-container{
     display: flex;
     align-items: center;
-    border: solid yellow 2px;
     width: 50%;
-    /* transform: scale(0); */
 }
 
 #about-me-box{
@@ -274,24 +270,18 @@ a:hover{
 }
 
 #contact-container{
-    border: solid white 2px;
     width: 50%;
-    /* transform: scale(0); */
     background-color: #18435A;
 }
 
 #contact-container form{
-    border: solid green 2px;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-/* #contact-container form > *{
-    margin-top: 12px;
-    width: 300px;
-} */
+
 form h1{
     font-size: 20px;
     font-family: var(--ff-primary);
