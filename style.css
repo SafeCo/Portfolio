@@ -11,28 +11,13 @@ html{
     --ff-primary: 'Montserrat', sans-serif;
     --ff-secondary: 'Montserrat', sans-serif;
 
-    --fw-reg: 300;
-    --fw-bold: 900;
-
-    --clr-light: #fff;
-    --clr-dark: #303030;
-    --clr-accents: #16e0bd;
-
-    --fs-h1: 3rem;
-    --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
-    --fs-body: 1rem;
-
-    
 }
 
 #landing-page{
     height: 100vh;
     color: white;
     background-color: #18435A;
-
-    /* background-image: linear-gradient(#01162E, #01426D); */
-
 }
 
 #projects{
@@ -97,13 +82,10 @@ body{
     
 }
 
-
-
 .one-nav{
     flex-grow: 2;
 }
 .nav-list{
-    /* border: solid red 1px; */
     font-size: var(--fs-h3);
     font-family: var(--ff-primary);
     width: 100%;
@@ -219,17 +201,17 @@ a:hover{
 }
 
 .contact-appear{
-    animation: contactAppear 3s forwards;
+    animation: contactAppear 1s forwards;
 }
 .contact-disappear{
-    animation: contactDisappear 3s forwards;
+    animation: contactDisappear 1s forwards;
 }
 
 .text-appear{
-    animation: textAppear 3s forwards;
+    animation: textAppear 1s forwards;
 }
 .text-disappear{
-    animation: textDisappear 1s forwards;
+    animation: textDisappear 0.5s forwards;
 
 }
 
@@ -264,9 +246,18 @@ a:hover{
     height: 400px;
     width: 100%;
     background: #ff5361;
+    font-family: var(--ff-primary);
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 #about-me-text{
+    margin-top: 10%;
+    width: 70%;
     opacity: 0;
+}
+#about-me-text p{
+    margin-top: 20px;
 }
 
 #contact-container{
@@ -328,25 +319,6 @@ form button{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*                                              PROJECTS PAGE */
 
 
@@ -372,10 +344,7 @@ form button{
 .project-item{
     position: relative;
     overflow: hidden;
-    /* border-radius: 12px; */
     border-bottom: solid grey 2px;
-    /* border: solid grey 2px; */
-    /* background-color:#13293D; */
     color: black;
     margin-top: 2%;
     margin-bottom: 2%;
@@ -460,8 +429,7 @@ form button{
     display: flex;
     flex-direction: column;
     margin-left: 15px;
-    /* border-left: solid grey 2px ;
-    border-right: solid grey 2px; */
+
 }
 .project-item-text p{
     margin-top: 10px;
@@ -487,8 +455,7 @@ form button{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* margin-top: auto; */
-    /* border-top: solid grey 1px; */
+
 }
 .project-item-tech  img{
     height: 50px;
