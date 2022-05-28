@@ -28,12 +28,9 @@ for (let i = 0; i < introText.length; i++){
 //                              CONTACT BUTTON
 
 const contactButton = document.querySelector('#contact-button')
-const contactPage = document.querySelector('#contact-container')
-const aboutmePage = document.querySelector('#about-me-container')
 const contactSection = document.querySelector('#contact-page')
 const contactClose = document.querySelector('#form-close')
 const aboutMeText = document.querySelector('#about-me-text')
-// const contactForm = document.querySelector('#contact-form')
 
 
 contactButton.addEventListener('click', ()=>{
@@ -111,10 +108,12 @@ function addProjects (data) {
             </div>
             <div class="project-item-tech">
                     <p>Technologies used</p>
-                    <img src="./Icons/html.svg" alt="HTML">
-                    <img src="./Icons/css.svg" alt="CSS">
-                    <img src="./Icons/javascript.svg" alt="Javascript">
-                    ${checkTrue()}
+                    <div class="project-item-tech-img">
+                        <img src="./Icons/html.svg" alt="HTML">
+                        <img src="./Icons/css.svg" alt="CSS">
+                        <img src="./Icons/javascript.svg" alt="Javascript">
+                        ${checkTrue()}
+                    </div>
             </div>
         </div>`
         

@@ -16,6 +16,7 @@ html{
 
 #landing-page{
     height: 100vh;
+    width: 100%;
     color: white;
     background-color: #18435A;
 }
@@ -150,6 +151,7 @@ a:hover{
 .two{
     position: relative;
     height: 80%;
+    color: white;
 }
 
 
@@ -467,4 +469,37 @@ form button{
 
 .project-item-tech > *:not(:first-child){
     margin-left: 5%;
+}
+
+
+/*                                              MEDIA QUERIES */
+
+
+@media screen and (max-width: 600px){
+    .project-item{
+        height: 550px;
+        width: 100vw;
+        grid-template-areas: 
+        "one"
+        "two"
+        "three";
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .project-item-repo{
+        height: 200px;
+        width: 200px;
+        margin-bottom: 20px;
+    }
+    .web-button{
+        margin-top: 15px;
+    }
+    .project-item-tech img{
+        margin-left: 12px;
+    }
+    .project-item-tech-img{
+        display: flex;
+    }
 }
