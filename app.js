@@ -31,16 +31,22 @@ const contactButton = document.querySelector('#contact-button')
 const contactSection = document.querySelector('#contact-page')
 const contactClose = document.querySelector('#form-close')
 const aboutMeText = document.querySelector('#about-me-text')
-
-
+const contactClosedText = document.querySelectorAll('.contact-closed')
+console.log(contactClosedText)
+//Clicking contact to open
 contactButton.addEventListener('click', ()=>{
     contactSection.classList.remove("contact-disappear")
     contactSection.classList.add("contact-appear") 
     contactForm.classList.remove("text-disappear")
     aboutMeText.classList.remove("text-disappear")
-
+    contactClosedText[0].style.visibility = "visible"
+    contactClosedText[1].style.visibility = "visible"
+    console.log("working")
+    // formInputs.classList.remove("contact-disappear")
+    // formInputs.classList.add("contact-appear")
 })
 
+// Text animation after conatct opens
 contactSection.addEventListener("animationend", ()=>{
     if (contactSection.classList[0] == "contact-appear"){
         contactForm.classList.add("text-appear") 
@@ -50,7 +56,7 @@ contactSection.addEventListener("animationend", ()=>{
     }
 });
 
-
+// Clicking button to close
 contactClose.addEventListener('click', ()=>{
     contactSection.classList.remove("contact-appear")
     contactSection.classList.add("contact-disappear") 
@@ -58,7 +64,6 @@ contactClose.addEventListener('click', ()=>{
     contactForm.classList.add("text-disappear")
     aboutMeText.classList.remove("text-appear")
     aboutMeText.classList.add("text-disappear")
-
 })
 
 
