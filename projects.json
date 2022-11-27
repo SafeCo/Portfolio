@@ -5,7 +5,7 @@
         "description": "A instagram clone made in React with Firebase as the backend. Containing various features such as creating new posts, commenting and adding profile pictures.",
         "live": "https://instagram-clone-react-102a0.web.app/login",
         "github": "https://github.com/SafeCo/instagram-clone",
-        "image": "./Project Images/Instagram clone.png",
+        "image": "./Project Images/Instagram Clone.png",
         "React" : true,
         "gsap" : false
     },

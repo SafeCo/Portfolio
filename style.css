@@ -10,7 +10,6 @@ html{
 :root{
     --ff-primary: 'Montserrat', sans-serif;
     --ff-secondary: 'Montserrat', sans-serif;
-
     --fs-h3: 1.25rem;
 }
 
@@ -160,7 +159,8 @@ a:hover{
     top: 35%;
     left: 5%;
     font-family: var(--ff-primary);
-    font-size: 3rem;
+    font-size: 4rem;
+    font-weight: 700;
     cursor: default;
     animation: textUp 3s forwards;
 }
