@@ -32,7 +32,7 @@ const contactSection = document.querySelector('#contact-page')
 const contactClose = document.querySelector('#form-close')
 const aboutMeText = document.querySelector('#about-me-text')
 const contactClosedText = document.querySelectorAll('.contact-closed')
-console.log(contactClosedText)
+
 //Clicking contact to open
 contactButton.addEventListener('click', ()=>{
     contactSection.classList.remove("contact-disappear")
@@ -91,9 +91,6 @@ function addProjects (data) {
             }
             
         }
-
-        console.log(data[i].github)
-        console.log(data[i].live)
 
         let projectItem = 
         `<div class="project-item">
