@@ -99,8 +99,8 @@ function addProjects (data) {
                 </div> 
             </div>
             <div class="project-item-text">
-                <h3>${data[i].title}</h3>
-                <p>${data[i].description}</p>
+                <h3 class="item-text">${data[i].title}</h3>
+                <p class="item-text">${data[i].description}</p>
                 <div class="web-button">
                     <a href="${ data[i].live}"> <button>Live</button> </a>
                     <a href="${ data[i].github}"> <button>Github</button> </a> 

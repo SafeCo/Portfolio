@@ -2,7 +2,7 @@
     {
         "id": 0,
         "title": "React E-commerce Cart",
-        "description": "An E-commerce Cart made in React. The site is responsive and contians animations for a sleeker user experience.",
+        "description": "An E-commerce Cart made in React. The site a fully responsive and contains animations for a sleeker user experience. Products have individual pages and can be added to the cart.",
         "live": "https://safeco.github.io/react-e-commerce/",
         "github": "https://github.com/SafeCo/react-e-commerce",
         "image": "./Project Images/React E-commerce Site.png",
