@@ -41,9 +41,6 @@ contactButton.addEventListener('click', ()=>{
     aboutMeText.classList.remove("text-disappear")
     contactClosedText[0].style.visibility = "visible"
     contactClosedText[1].style.visibility = "visible"
-    console.log("working")
-    // formInputs.classList.remove("contact-disappear")
-    // formInputs.classList.add("contact-appear")
 })
 
 // Text animation after conatct opens
@@ -127,28 +124,7 @@ function addProjects (data) {
 
 
 
-//                              Send Emails
+//                              Email Contact Form
 
 const contactForm = document.querySelector('#contact-form')
-const senderEmail = document.querySelector('#email')
-const senderName = document.querySelector('#name')
-const senderPhone = document.querySelector('#phone')
-const senderMessage = document.querySelector('#message')
-
-window.onload = function() {
-    contactForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        var tempParams = {
-            name : senderName.value,
-            email: senderEmail.value,
-            phone: senderPhone.value,
-            message: senderMessage.value,
-        }
-        emailjs.send('service_5c7blxh','template_5m5saui', tempParams )
-        .then(function(){
-            alert("Email sent sucessfully")
-            contactForm.reset()
-        })
-    });
-}
 
